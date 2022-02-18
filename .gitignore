@@ -1,0 +1,16 @@
+**/node_modules
+**/.idea
+**/bin
+**/.idea
+**/build
+**/.openzeppelin
+
+
+# files
+.DS_Store
+.etherscanApi
+.infuraKey
+.mnemonic
+package-lock.json
+yarn.lock
+deploy.json
