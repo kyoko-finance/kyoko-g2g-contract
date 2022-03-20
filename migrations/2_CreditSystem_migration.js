@@ -1,6 +1,7 @@
 const CreditSystem = artifacts.require("CreditSystem");
 const saveData = require('../fsUtil');
 
+const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
 //CreditSystem Manager
 // const multiSig = "";
@@ -10,9 +11,15 @@ module.exports = async function (deployer, network, accounts) {
   console.log('account', account);
 
   console.log("deploy CreditSystem start");
-  await deployer.deploy(CreditSystem, 
-    {from: account, overwrite: true});
+  // await deployer.deploy(CreditSystem,
+    // { from: account, overwrite: true });
+
+  await deployProxy(CreditSystem, [],
+    { deployer, initializer: 'initialize', overwrite: false });
+
   console.log("deploy CreditSystem done");
+
+
 
   //grant the manager role to multiSign
   console.log("setting credit System roles start");
