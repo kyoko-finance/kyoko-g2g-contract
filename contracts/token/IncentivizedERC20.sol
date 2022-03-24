@@ -205,7 +205,7 @@ abstract contract IncentivizedERC20 is
             amount,
             "ERC20: transfer amount exceeds balance"
         );
-        uint256 oldRecipientBalance = _balances[recipient];
+        // uint256 oldRecipientBalance = _balances[recipient];
         _balances[recipient] = _balances[recipient].add(amount);
     }
 

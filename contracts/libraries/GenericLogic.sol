@@ -41,7 +41,7 @@ library GenericLogic {
         vars.totalDebt = calculateUserAccountData(user, reservesData, reserves, reservesCount);
 
         if (vars.totalDebt == 0) {
-            return true;
+            return false;
         }
 
         return true;

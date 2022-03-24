@@ -63,6 +63,18 @@ interface ILendingPool {
     );
 
     /**
+     * @dev Emitted on initReserve()
+     **/
+    event InitReserve(
+        address asset,
+        address kTokenAddress,
+        address variableDebtAddress,
+        address interestRateStrategyAddress,
+        uint8 reserveDecimals,
+        uint16 reserveFactor
+    );
+
+    /**
      * @dev Emitted when the pause is triggered.
      */
     event Paused();

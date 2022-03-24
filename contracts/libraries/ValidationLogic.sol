@@ -46,9 +46,9 @@ library ValidationLogic {
         address reserveAddress,
         uint256 amount,
         uint256 userBalance,
-        mapping(address => DataTypes.ReserveData) storage reservesData,
-        mapping(uint256 => address) storage reserves,
-        uint256 reservesCount
+        mapping(address => DataTypes.ReserveData) storage reservesData
+        // mapping(uint256 => address) storage reserves,
+        // uint256 reservesCount
     ) external view {
         require(amount != 0, "VL_INVALID_AMOUNT");
         require(amount <= userBalance, "VL_NOT_ENOUGH_AVAILABLE_USER_BALANCE");

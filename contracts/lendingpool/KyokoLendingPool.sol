@@ -255,6 +255,7 @@ contract KyokoLendingPool is
         );
 
         _addReserveToList(asset, reserveDecimals, reserveFactor);
+        emit InitReserve(asset, kTokenAddress, variableDebtAddress, interestRateStrategyAddress, reserveDecimals, reserveFactor);
     }
 
     function _addReserveToList(
