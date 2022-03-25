@@ -121,9 +121,7 @@ contract KyokoLendingPool is
             asset,
             amountToWithdraw,
             userBalance,
-            _reserves,
-            _reservesList,
-            _reservesCount
+            _reserves
         );
         reserve.updateState();
         reserve.updateInterestRates(asset, kToken, 0, amountToWithdraw);

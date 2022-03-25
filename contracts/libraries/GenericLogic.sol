@@ -14,39 +14,6 @@ library GenericLogic {
     using KyokoMath for uint256;
     using PercentageMath for uint256;
 
-    struct balanceDecreaseAllowedLocalVars {
-        uint256 decimals;
-        uint256 totalDebt;
-        uint256 amountToDecrease;
-    }
-
-    /**
-    * @dev Checks if a specific balance decrease is allowed
-    * (i.e. doesn't bring the user borrow position availableBorrowsInWEI under the credit line)
-
-    * @param user The address of the user
-    * @param reservesData The data of all the reserves
-    * @param reserves The list of all the active reserves
-    * @return true if the decrease of the balance is allowed
-    **/
-    function balanceDecreaseAllowed(
-        address user,
-        mapping(address => DataTypes.ReserveData) storage reservesData,
-        mapping(uint256 => address) storage reserves,
-        uint256 reservesCount
-    ) external view returns (bool) {
-
-        balanceDecreaseAllowedLocalVars memory vars;
-
-        vars.totalDebt = calculateUserAccountData(user, reservesData, reserves, reservesCount);
-
-        if (vars.totalDebt == 0) {
-            return false;
-        }
-
-        return true;
-    }
-
     struct CalculateUserAccountDataVars {
         uint256 decimals;
         uint256 tokenUnit;
