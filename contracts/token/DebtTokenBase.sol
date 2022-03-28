@@ -38,18 +38,18 @@ abstract contract DebtTokenBase is
      * respect the liquidation constraints (even if delegated, a delegatee cannot
      * force a delegator HF to go below 1)
      **/
-    function approveDelegation(address delegatee, uint256 amount)
-        external
-        override
-    {
-        _borrowAllowances[_msgSender()][delegatee] = amount;
-        emit BorrowAllowanceDelegated(
-            _msgSender(),
-            delegatee,
-            _getUnderlyingAssetAddress(),
-            amount
-        );
-    }
+    // function approveDelegation(address delegatee, uint256 amount)
+    //     external
+    //     override
+    // {
+    //     // _borrowAllowances[_msgSender()][delegatee] = amount;
+    //     emit BorrowAllowanceDelegated(
+    //         _msgSender(),
+    //         delegatee,
+    //         _getUnderlyingAssetAddress(),
+    //         amount
+    //     );
+    // }
 
     /**
      * @dev returns the borrow allowance of the user
