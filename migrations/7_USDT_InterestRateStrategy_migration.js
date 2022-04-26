@@ -16,7 +16,7 @@ module.exports = async function(deployer, network, accounts) {
     BASE_VARIABLE_BORROW_RATE,
     VARIABLE_RATE_SLOPE1,
     VARIABLE_RATE_SLOPE2,
-    { from: account, overwrite: true }
+    { from: account, overwrite: false }
   );
   console.log("deploy USDT DefaultReserveInterestRateStrategy done");
 

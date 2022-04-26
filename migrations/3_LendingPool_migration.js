@@ -27,7 +27,7 @@ module.exports = async function (deployer) {
     await deployer.link(ValidationLogic, KyokoLendingPool);
 
     await deployProxy(KyokoLendingPool, [creditContractAddress], 
-        { deployer, initializer: 'initialize', overwrite: true, unsafeAllow: ["external-library-linking"] });
+        { deployer, initializer: 'initialize', overwrite: false, unsafeAllow: ["external-library-linking"] });
     console.log("deploy KyokoLendingPool done");
 
     const reserveLogicAddress = ReserveLogic.address;

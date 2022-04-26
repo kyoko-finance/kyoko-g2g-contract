@@ -14,13 +14,11 @@ import "./LendingPoolStorage.sol";
 import "../libraries/ReserveLogic.sol";
 import "./DataTypes.sol";
 import "../libraries/ValidationLogic.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 /**
  * @dev kyoko ERC20 lending pool
  */
 contract KyokoLendingPool is
-    Initializable,
     ILendingPool,
     LendingPoolStorage,
     AccessControlEnumerableUpgradeable

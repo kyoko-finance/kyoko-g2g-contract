@@ -14,7 +14,7 @@ interface ICreditDelegationToken {
      * @param delegatee the address receiving the delegated borrowing power
      * @param amount the maximum amount being delegated.
      **/
-    function approveDelegation(address delegatee, uint256 amount) external;
+    // function approveDelegation(address delegatee, uint256 amount) external;
 
     /**
      * @dev returns the borrow allowance of the user

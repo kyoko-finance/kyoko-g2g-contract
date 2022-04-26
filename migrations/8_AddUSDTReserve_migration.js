@@ -7,7 +7,7 @@ const deployConfig = JSON.parse(configStr);
 // console.log(config);
 
 //LendingPool Manager
-const multiSig = "0x00000000000000000000000000000000000000000";
+const multiSig = "0x64A4E3270FF3566F338FfF353f7D416010cCD1A1";
 
 const assetTokenAddress = deployConfig.assetToken;
 const creditSystemAddress = deployConfig.creditSystem;

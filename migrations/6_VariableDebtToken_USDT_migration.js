@@ -11,7 +11,7 @@ const deployConfig = JSON.parse(configStr);
 const poolAddress = deployConfig.kyokoLendingPool;
 const underlyingAsset = deployConfig.assetToken;
 const debtTokenDecimals = "6";
-const debtTokenName = "kyoko variable debt bearing USDT";
+const debtTokenName = "Kyoko variable debt bearing USDT";
 const debtTokenSymbol = "variableDebtUSDT";
 const params = 0x00;
 

@@ -61,7 +61,11 @@ contract CreditSystem is AccessControlEnumerableUpgradeable {
         _;
     }
 
-    constructor() {
+    // constructor() {
+    //     _grantRole(DEFAULT_ADMIN_ROLE, _msgSender());
+    // }
+    function initialize() public initializer {
+        __AccessControlEnumerable_init();
         _grantRole(DEFAULT_ADMIN_ROLE, _msgSender());
     }
 

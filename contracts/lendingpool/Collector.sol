@@ -23,6 +23,7 @@ contract Collector is AccessControlEnumerableUpgradeable {
      * @dev initializes the contract
      */
     function initialize() public initializer {
+        __AccessControlEnumerable_init();
         _grantRole(DEFAULT_ADMIN_ROLE, _msgSender());
     }
 

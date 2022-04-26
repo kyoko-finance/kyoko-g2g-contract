@@ -12,7 +12,7 @@ const poolAddress = deployConfig.kyokoLendingPool;
 const treasuryAddress = deployConfig.collector;
 const underlyingAsset = deployConfig.assetToken;
 const kTokenDecimals = "6";
-const kTokenName = "kyoko interest bearing USDT";
+const kTokenName = "Kyoko interest bearing USDT";
 const kTokenSymbol = "kUSDT";
 const params = 0x00;
 
@@ -26,7 +26,7 @@ module.exports = async function (deployer, network, accounts) {
   // await deployer.deploy(KToken);
   await deployProxy(KToken,
     [poolAddress, treasuryAddress, underlyingAsset, kTokenDecimals, kTokenName, kTokenSymbol, params],
-    { deployer, overwrite: true, initializer: 'initialize' });
+    { deployer, overwrite: false, initializer: 'initialize' });
   console.log("deploy KToken done");
   const kTokenAddress = KToken.address;
 
